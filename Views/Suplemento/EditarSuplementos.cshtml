@@ -1,0 +1,35 @@
+﻿@model List<NatuViva.Models.Suplemento>
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/detalhes.css" asp-append-version="true" />
+}
+
+<style>
+    .imagemProduto {
+        max-height: 200px;
+        width: auto;
+    }
+</style>
+<div class="container d-flex"> 
+
+
+    <div class="row">
+
+
+        @foreach (var item in Model)
+        {
+            <div>
+               
+                <img src="~/images/Produtos/@item.ImagemUrl" class="imagemProduto" alt=@item.Nome>
+            
+
+            <div>
+                <a asp-controller="Suplemento" asp-action="ExibirFormularioEdicao" asp-route-id="@item.SuplementoId" class="btn btn-success btn-sm">EDITAR</a>
+                <a asp-controller="Suplemento" asp-action="ConfirmarExclusao" asp-route-id="@item.SuplementoId" class="btn btn-danger btn-sm">ECLUIR</a>
+            </div>
+            </div>
+        }
+        
+
+    </div>
+</div>

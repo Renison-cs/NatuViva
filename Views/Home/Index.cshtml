@@ -1,0 +1,89 @@
+﻿@model List<NatuViva.Models.Suplemento>
+@{
+    ViewData["Title"] = "Home Natuviva";
+}
+
+<style>
+    .prostatil {
+        justify-content: center;
+        height: auto;
+        max-width: 100%;
+        display: block
+    }
+
+    .precoProdutoDestaque {
+        font-size: 20px;
+        color: #222;
+    }
+
+    .botao {
+        color: white;
+    }
+    .imagemProduto
+    {
+       height:150px;
+        width: auto;
+    }
+    body{
+        max-width:1000px;
+        margin: auto;
+    }
+    div{
+        box-sizing: border-box;
+    }
+   
+</style>
+
+
+<div class="container ">
+    <div class="row  align-items-center">
+        <div class="col-4"><img src="~/images/prostatil.png" class="prostatil"></div>
+        <div class="col-8 ">
+            <div class="cartao precoProdutoDestaque">
+                <h1 class="pb-3 text-secondary">
+
+                    SUPLEMENTOS
+                    <br />NATURAIS
+                    <br />ENCÁPSULADOS
+                </h1>
+                <p class="text-secondary">Explore nossa seleção de suplementos<br />feito com ingredientes naturais</p>
+
+                <a asp-controller="Suplemento" asp-action="ListarSuplementos" class="btn btn-success text-light">
+                 LINHA COMPLETA DOS SUPLEMENTOS NATUVIVA  
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-5">Destaques</h1>
+        </div>
+    </div>
+    <div class="row mt-2">
+        @{
+            var contador = 1;
+
+            foreach (var item in Model)
+            {
+                <div class="col-3 d-flex flex-column align-items-center text-centerbg-light">
+                    <img src="~/images/Produtos/@item.ImagemUrl" class="imagemProduto">
+                    @item.Nome<br />
+                    @item.Preco.ToString("c")
+                </div>
+
+                if (contador == 4)
+                    break;
+
+                contador++;
+            }
+        }
+
+    </div>
+</div>
+
+
+
+

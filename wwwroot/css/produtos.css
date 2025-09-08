@@ -1,0 +1,10 @@
+﻿/* wwwroot/css/produtos.css */
+.produto-card {
+    border: 2px solid #28a745;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    .produto-card:hover {
+        transform: scale(1.05);
+    }

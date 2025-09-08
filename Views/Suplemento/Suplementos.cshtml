@@ -1,0 +1,51 @@
+﻿
+@model List<NatuViva.Models.Suplemento>
+
+  @section Styles{
+      <link rel="stylesheet" href="~/css/detalhes.css" asp-append-version="true" />
+  } 
+  @{
+      // TELA DE EXIBIÇÃO DE PRODUTOS NATUVIVA
+   }
+
+
+
+  <div class="container bg-light m-4 mt-5 d-flex align-items-center flex-column">
+
+      <a asp-action="cadastrarsuplemento" class="btn-success">Cadastrar novo Produto</a>
+  <h1 class="text-success"> Linha de suplementos Natuviva</h1>
+
+
+<div class="container py-4">
+   
+    
+    <div class="row">
+        @{
+            int counter = 1;
+            foreach (var item in Model)
+            {
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100 produto-card">
+                        <img src="/images/produtos/@item.ImagemUrl" class="card-img-top p-3" alt="@item.Nome" style="height: 200px; object-fit: contain;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center">@item.Nome</h5>
+                            <div class="mt-auto text-center">
+                                <a asp-action="EditarSuplementos" class="btn btn-success">Editar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @if(counter % 4 == 0)
+                {
+                    @:</div><div class="row">
+                }
+                counter++;             
+                
+            }
+        }
+    </div>
+    </div>
+    </div>
+
+
+   

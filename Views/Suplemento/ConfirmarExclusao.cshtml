@@ -1,0 +1,55 @@
+﻿@model NatuViva.Models.Suplemento
+
+<style>
+
+    .produto
+    {
+        max-height: 300px;
+        max-width: 100%; 
+        object-fit:contain; 
+        margin: 0 auto;
+        display: block;
+    }
+
+        /* respectivo comentario das 
+        determina a altura maxima do elemento
+        respeita a largura maxima do elemento pai
+        mantem a proporção da imagem 
+        centraliza orizontalmente
+        evita espaços estras se a imagem for inline
+        
+        obs: usar o object-fit para a imagem preencher o espaço (pode cortar bordas)
+        */        
+    .conteinerProduto{
+        width:200px;
+        border-radius: 10px;
+       
+    }
+
+</style>
+
+<h1 class="bg-danger text-light text-center p-2">DESEJA REALMENTE EXCLUIR O PRODUTO?</h1>
+
+<div class="container">
+
+
+
+    <div class="row d-flex justify-content-center align-items-center">
+
+        <div class="conteinerProduto d-flex flex-column ">
+            <img src="~/images/Produtos/@Model.ImagemUrl" class="mt-5 produto" />
+
+            
+            <form asp-action="Excluir">
+                <input type="hidden" name="SuplementoId" value="@Model.SuplementoId" />
+                
+            <button asp-action="Excluir" asp-route-id="@Model.SuplementoId" class="btn-outline-danger  mt-4 p-2 text-center"> EXCLUIR </button>
+
+            </form>
+
+
+
+            <a asp-action="Cancelar" class=" btn-outline-success p-2 mt-4 text-center cancelar">CANCELAR</a>
+        </div>
+    </div>
+</div>
