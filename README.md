@@ -1,6 +1,6 @@
 
 
-# 🌿 EcoNatural - Ecommerce de Produtos Naturais
+# 🌿 Natuviva - Ecommerce de Produtos Naturais
 
 > ⚠️ **Status do Projeto: Em Desenvolvimento Ativo**  
 > Apenas o módulo de cadastro de produtos está implementado no momento.
