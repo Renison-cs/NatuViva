@@ -3,7 +3,7 @@
 # 🌿 Natuviva - Ecommerce de Produtos Naturais
 
 > ⚠️ **Status do Projeto: Em Desenvolvimento Ativo**  
-> Apenas o módulo de cadastro de produtos está implementado no momento.
+
 
 Sistema de ecommerce especializado na venda de produtos naturais encapsulados, desenvolvido em ASP.NET Core.
 
