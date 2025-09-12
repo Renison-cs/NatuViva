@@ -11,7 +11,16 @@ Sistema de ecommerce especializado na venda de produtos naturais encapsulados, d
 
 ### ✅ Módulo Concluído
 - **Cadastro de Produtos**
-  - Registro de produtos com informações detalhadas 
+  - Registro de produtos com informações detalhadas
+
+    -**Edição de produtos**
+    - Atualização de caracteristicas dos produtos
+   
+    - **Listagem de produtos **
+    - Listagem de todos os produtos disponiveis no banco de dados
+   
+    - **Remoção de produtos**
+    - exclusão de produtos do sistema
 
 ### 🚧 Em Breve
 - Sistema de autenticação de usuários
