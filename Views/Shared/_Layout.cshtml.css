@@ -38,9 +38,12 @@ button.accept-policy {
   font-size: 1rem;
   line-height: inherit;
 }
+main.flex-fill {
+    flex: 1; /* ocupa o espaço restante */
+}
 
 .footer {
- 
+ margin: auto;
   bottom: 0;
   width: 100%;
   white-space: nowrap;

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using NatuViva.Data;
 using NatuViva.Models;
+using System.Formats.Tar;
 
 namespace NatuViva.Controllers
 {
@@ -124,11 +125,16 @@ namespace NatuViva.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Cancelar()
+        public IActionResult Cancelar()
         {
             return RedirectToAction("index", "home");
         }
 
+        public async Task <IActionResult> MostrarDetalhes(int id)
+        {
+            Suplemento? suplemento = await _context.Suplementos.FirstOrDefaultAsync(x => x.SuplementoId == id);
+            return View(suplemento);
+        }
 
 
     }
