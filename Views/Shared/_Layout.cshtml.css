@@ -34,13 +34,16 @@ a {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
-button.accept-policy {
+button.accept-policy {""
   font-size: 1rem;
   line-height: inherit;
 }
+main.flex-fill {
+    flex: 1; /* ocupa o espaço restante */
+}
 
 .footer {
- 
+ margin: auto;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
