@@ -17,7 +17,7 @@ namespace NatuViva.Controllers
 
         public IActionResult ListarSuplementos()
         {
-            var suplementos = _context.Suplementos.ToList();
+            var suplementos =  _context.Suplementos.ToList();
             return View("Suplementos", suplementos);
         }
 
@@ -122,12 +122,7 @@ namespace NatuViva.Controllers
 
             return RedirectToAction("Index", "Home");
         }
-
-        [HttpGet]
-        public async Task<IActionResult> Cancelar()
-        {
-            return RedirectToAction("index", "home");
-        }
+      
 
 
 
